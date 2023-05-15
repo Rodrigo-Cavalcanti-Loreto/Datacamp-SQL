@@ -1,0 +1,9 @@
+-- Debug this code
+SELECT COUNNT(birthdate) AS count_birthdays
+FROM peeple;
+
+
+-- Debugged code
+-- COUNT e "people" estavam escritas errado
+SELECT COUNT(birthdate) AS count_birthdays
+FROM people;
