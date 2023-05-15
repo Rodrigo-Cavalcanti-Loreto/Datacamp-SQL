@@ -1,0 +1,5 @@
+-- Select the budget for films released after 1990 grouped by year
+SELECT release_year
+FROM films
+WHERE release_year > 1990
+GROUP BY release_year;
