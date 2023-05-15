@@ -1,0 +1,3 @@
+-- Calculate the title and duration_hours from films
+SELECT title, (duration / 60.0) AS duration_hours
+FROM films;
