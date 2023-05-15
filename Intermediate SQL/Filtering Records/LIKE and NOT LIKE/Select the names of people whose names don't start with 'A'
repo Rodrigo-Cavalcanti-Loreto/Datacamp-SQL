@@ -1,0 +1,4 @@
+-- Select the names of people whose names don't start with 'A'
+SELECT name
+FROM people
+WHERE name NOT LIKE 'A%';
