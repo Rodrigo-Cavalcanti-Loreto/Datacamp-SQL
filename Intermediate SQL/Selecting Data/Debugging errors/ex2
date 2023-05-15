@@ -1,0 +1,9 @@
+-- Debug this code
+SELECT film_id imdb_score num_votes
+FROM reviews;
+
+
+-- Debugged code
+-- Faltava "," entre as colunas pedidas pelo SELECT
+SELECT film_id, imdb_score, num_votes
+FROM reviews;
