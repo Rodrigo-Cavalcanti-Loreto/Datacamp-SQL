@@ -1,0 +1,10 @@
+-- Debug this code
+SELECT certfication
+FROM films
+LIMIT 5;
+
+-- Code debugged
+-- Erro estava na escrita de "certification"
+SELECT certification
+FROM films
+LIMIT 5;
