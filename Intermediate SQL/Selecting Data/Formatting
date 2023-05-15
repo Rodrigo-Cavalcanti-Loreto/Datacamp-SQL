@@ -1,0 +1,7 @@
+-- Rewrite this query
+select person_id, role from roles limit 10
+
+-- Código reescrito seguindo a formatação ideal de SQL
+SELECT person_id, role 
+FROM roles 
+LIMIT 10;
