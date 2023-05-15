@@ -1,0 +1,3 @@
+-- Find the latest release_year
+SELECT MAX(release_year) AS latest_year
+FROM films;
