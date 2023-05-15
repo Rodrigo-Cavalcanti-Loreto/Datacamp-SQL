@@ -1,0 +1,3 @@
+-- Select title and author from the books table
+SELECT title, author
+FROM books;
