@@ -1,0 +1,4 @@
+-- Write SQL code that returns a result set with just one column listing the unique authors in the books table.
+-- Select unique authors from the books table
+SELECT DISTINCT author
+FROM books;
