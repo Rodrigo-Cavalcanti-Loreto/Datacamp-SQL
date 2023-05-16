@@ -1,3 +1,4 @@
+-- Calculate the average amount grossed by all films whose titles start with the letter 'A' and alias with avg_gross_A.
 -- Calculate the average gross of films that start with A
 SELECT AVG(gross) AS avg_gross_A
 FROM films
