@@ -1,0 +1,10 @@
+-- Perform an inner join with the cities table on the left and the countries table on the right;
+-- do not alias tables here or in the next step.
+
+-- Identify the relevant column names to join ON by inspecting the cities and countries tabs in the console.
+SELECT * 
+FROM cities
+-- Inner join to countries
+INNER JOIN countries
+-- Match on country codes
+ON cities.country_code = countries.code;
