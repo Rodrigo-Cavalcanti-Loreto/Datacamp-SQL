@@ -1,0 +1,7 @@
+-- Rearrange SELECT statement, keeping aliases
+SELECT l.name AS language, c.name AS country
+FROM countries AS c
+INNER JOIN languages AS l
+USING(code)
+-- Order the results by language
+ORDER BY language;
