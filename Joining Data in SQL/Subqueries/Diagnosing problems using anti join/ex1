@@ -1,3 +1,5 @@
+-- Begin by writing a query to return the code and name (in order, not aliased) for all countries in the continent of Oceania from the countries table.
+-- Observe the number of records returned and compare this with the provided INNER JOIN, which returns 15 records.
 -- Select code and name of countries from Oceania
 SELECT code, name
 FROM countries
