@@ -1,3 +1,4 @@
+-- Select the release_year for each film in the films table, filter for records released after 1990, and group by release_year.
 -- Select the budget for films released after 1990 grouped by year
 SELECT release_year
 FROM films
