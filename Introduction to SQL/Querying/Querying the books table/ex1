@@ -1,0 +1,4 @@
+-- Use SQL to return a result set of all book titles included in the books table.
+-- Return all titles from the books table
+SELECT title
+FROM books;
