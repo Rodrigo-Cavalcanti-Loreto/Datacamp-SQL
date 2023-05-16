@@ -1,3 +1,4 @@
+-- Count the total number of records in the people table, aliasing the result as count_records.
 -- Count the number of records in the people table
 SELECT COUNT(*) AS count_records
 FROM people;
