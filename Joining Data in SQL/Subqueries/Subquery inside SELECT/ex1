@@ -1,0 +1,12 @@
+-- Write a LEFT JOIN with countries on the left and the cities on the right, joining on country code.
+-- In the SELECT statement of your join, include country names as country, and count the cities in each country, aliased as cities_num.
+-- Sort by cities_num (descending), and country (ascending), limiting to the first nine records.
+-- Find top nine countries with the most cities
+SELECT countries.name AS country, COUNT(cities.name) AS cities_num
+FROM countries
+LEFT JOIN cities
+ON countries.code = cities.country_code
+GROUP BY countries.name
+-- Order by count of cities as cities_num
+ORDER BY cities_num DESC, country
+LIMIT 9;
