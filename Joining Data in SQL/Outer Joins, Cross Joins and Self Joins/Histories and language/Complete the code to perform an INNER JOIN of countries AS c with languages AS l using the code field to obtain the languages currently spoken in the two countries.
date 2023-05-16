@@ -1,0 +1,7 @@
+SELECT c.name AS country, l.name AS language
+FROM countries AS c
+-- Inner join countries as c with languages as l on code
+INNER JOIN languages AS l
+ON c.code = l.code
+WHERE c.code IN ('PAK','IND')
+	AND l.code in ('PAK','IND');
