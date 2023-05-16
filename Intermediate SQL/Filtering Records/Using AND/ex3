@@ -1,3 +1,4 @@
+-- Select all details for German-language films released after 2000 but before 2010 using only WHERE and AND.
 -- Select all records for German-language films released after 2000 and before 2010
 SELECT *
 FROM films
