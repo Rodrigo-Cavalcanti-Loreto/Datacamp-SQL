@@ -1,0 +1,5 @@
+-- Count how many records have a num_votes of at least 100,000; use the alias films_over_100K_votes.
+-- Count the records with at least 100,000 votes
+SELECT COUNT(num_votes) AS films_over_100K_votes
+FROM reviews
+WHERE num_votes >=100000;
