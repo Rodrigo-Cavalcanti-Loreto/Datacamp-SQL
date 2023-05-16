@@ -1,3 +1,4 @@
+-- Return the unique countries represented in the films table using DISTINCT.
 -- Return the unique countries from the films table
 SELECT DISTINCT country
 FROM films;
