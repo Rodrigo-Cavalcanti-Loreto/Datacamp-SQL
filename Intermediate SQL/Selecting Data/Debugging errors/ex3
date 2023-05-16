@@ -1,3 +1,4 @@
+-- Find the two bugs in this final query.
 -- Debug this code
 SELECT COUNNT(birthdate) AS count_birthdays
 FROM peeple;
