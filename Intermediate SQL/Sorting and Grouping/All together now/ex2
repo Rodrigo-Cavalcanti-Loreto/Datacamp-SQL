@@ -1,3 +1,4 @@
+-- Modify the query to include the average budget aliased as avg_budget and average gross aliased as avg_gross for the results we have so far.
 -- Modify the query to also list the average budget and average gross
 SELECT release_year, AVG(budget) AS avg_budget, AVG(gross) AS avg_gross
 FROM films
