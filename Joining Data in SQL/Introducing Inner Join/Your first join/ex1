@@ -1,0 +1,4 @@
+-- Begin by selecting all columns from the cities table, using the SQL shortcut that selects all.
+-- Select all columns from cities
+SELECT *
+FROM cities;
