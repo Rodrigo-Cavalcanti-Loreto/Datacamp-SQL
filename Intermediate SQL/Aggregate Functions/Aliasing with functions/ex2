@@ -1,3 +1,4 @@
+-- Calculate the percentage of people who are no longer alive and alias the result as percentage_dead.
 -- Calculate the percentage of people who are no longer alive
 SELECT COUNT(deathdate) * 100.0 / COUNT(id) AS percentage_dead
 FROM people;
