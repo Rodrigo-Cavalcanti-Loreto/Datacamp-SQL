@@ -1,0 +1,10 @@
+-- Complete the subquery to return a result equivalent to your LEFT JOIN, counting all cities in the cities table as cities_num.
+-- Use the WHERE clause to enable the correct country codes to be matched in the cities and countries columns.
+SELECT countries.name AS country,
+-- Subquery that provides the count of cities   
+  (SELECT COUNT (cities.name)
+   FROM cities
+   WHERE code = country_code) AS cities_num
+FROM countries
+ORDER BY cities_num DESC, country
+LIMIT 9;
