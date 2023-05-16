@@ -1,3 +1,4 @@
+-- Modify your query so that you are joining to economies on year as well as code.
 SELECT name, e.year, fertility_rate, unemployment_rate
 FROM countries AS c
 INNER JOIN populations AS p
