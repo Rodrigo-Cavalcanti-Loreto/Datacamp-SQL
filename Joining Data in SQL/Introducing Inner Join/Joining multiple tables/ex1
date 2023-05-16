@@ -1,3 +1,5 @@
+-- Perform an inner join of countries AS c (left) with populations AS p (right), on code.
+-- Select name, year and fertility_rate.
 -- Select relevant fields
 SELECT name, year, fertility_rate
 FROM countries AS c
