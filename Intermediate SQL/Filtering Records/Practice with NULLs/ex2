@@ -1,3 +1,4 @@
+-- Count the number of films with a language associated with them and use the alias count_language_known.
 -- Count the number of films we have language data for
 SELECT COUNT(language) AS count_language_known
 FROM films
