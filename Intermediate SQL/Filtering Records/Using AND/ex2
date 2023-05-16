@@ -1,3 +1,4 @@
+-- Update the query from the previous step to show German-language films released after 2000 rather than before.
 -- Update the query to see all German-language films released after 2000
 SELECT title, release_year
 FROM films
