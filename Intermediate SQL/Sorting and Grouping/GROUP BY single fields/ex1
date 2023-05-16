@@ -1,3 +1,4 @@
+-- Select the release_year and count of films released in each year aliased as film_count.
 -- Find the release_year and film_count of each year
 SELECT release_year, COUNT(*) AS film_count
 FROM films
