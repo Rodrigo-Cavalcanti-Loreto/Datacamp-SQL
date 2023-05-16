@@ -1,4 +1,0 @@
--- List all film titles with missing budgets
-SELECT title AS no_budget_info
-FROM films
-WHERE budget IS NULL;
