@@ -1,3 +1,4 @@
+-- Select the name of each person in the people table, sorted alphabetically.
 -- Select name from people and sort alphabetically
 SELECT name
 FROM people
