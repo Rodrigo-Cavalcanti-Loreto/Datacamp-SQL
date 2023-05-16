@@ -1,3 +1,5 @@
+-- Change the code to perform a LEFT JOIN instead of an INNER JOIN.
+-- After executing this query, have a look at how many records the query result contains.
 SELECT 
 	c1.name AS city, 
     code, 
