@@ -1,3 +1,4 @@
+-- Calculate the lowest gross film in 1994 and use the alias lowest_gross.
 -- Calculate the lowest gross film in 1994
 SELECT MIN(gross) AS lowest_gross
 FROM films
