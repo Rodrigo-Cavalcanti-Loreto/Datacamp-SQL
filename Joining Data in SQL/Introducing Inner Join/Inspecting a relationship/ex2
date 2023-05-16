@@ -1,3 +1,5 @@
+-- Rearrange the SELECT statement so that the language column appears on the left and the country column on the right.
+-- Sort the results by language.
 -- Rearrange SELECT statement, keeping aliases
 SELECT l.name AS language, c.name AS country
 FROM countries AS c
