@@ -1,3 +1,7 @@
+-- Complete the join of countries AS c with populations as p.
+-- Filter on the year 2010.
+-- Sort your results by life expectancy in ascending order.
+-- Limit the result to five countries.
 SELECT 
   	c.name AS country,
     region,
