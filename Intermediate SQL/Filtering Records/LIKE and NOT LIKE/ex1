@@ -1,3 +1,4 @@
+-- Select the names of all people whose names begin with 'B'.
 -- Select the names that start with B
 SELECT name
 FROM people
