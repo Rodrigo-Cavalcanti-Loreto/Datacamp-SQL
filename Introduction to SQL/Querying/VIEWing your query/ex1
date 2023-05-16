@@ -1,3 +1,4 @@
+-- Add a single line of code that saves the results of the written query as a view called library_authors.
 -- Save the results of this query as a view called library_authors
 CREATE VIEW library_authors AS
 SELECT DISTINCT author AS unique_author
