@@ -1,3 +1,4 @@
+-- Select both the title and author fields from books.
 -- Select title and author from the books table
 SELECT title, author
 FROM books;
