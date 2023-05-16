@@ -1,3 +1,4 @@
+-- Select the release_year and average duration aliased as avg_duration of all films, grouped by release_year.
 -- Find the release_year and average duration of films for each year
 SELECT release_year, AVG(duration) AS avg_duration
 FROM films
