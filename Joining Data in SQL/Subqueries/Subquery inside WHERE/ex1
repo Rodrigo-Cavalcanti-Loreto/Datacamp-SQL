@@ -1,0 +1,7 @@
+-- Begin by calculating the average life expectancy from the populations table.
+-- Filter your answer to use records from 2015 only.
+-- Select average life_expectancy from the populations table
+SELECT avg(life_expectancy)
+FROM populations
+-- Filter for the year 2015
+WHERE year = 2015;
