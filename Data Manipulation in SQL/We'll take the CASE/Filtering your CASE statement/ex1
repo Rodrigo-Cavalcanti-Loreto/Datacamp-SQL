@@ -1,0 +1,8 @@
+-- Identify Bologna's team ID listed in the teams_italy table by selecting the team_long_name and team_api_id.
+-- Select team_long_name and team_api_id from team
+SELECT
+	team_long_name,
+	team_api_id
+FROM teams_italy
+-- Filter for team long name
+WHERE team_long_name = 'Bologna';
