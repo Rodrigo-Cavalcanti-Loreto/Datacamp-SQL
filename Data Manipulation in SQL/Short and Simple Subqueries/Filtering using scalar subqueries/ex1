@@ -1,0 +1,5 @@
+-- Calculate triple the average home + away goals scored across all matches. This will become your subquery in the next step. Note that this column does not have an alias, so it will be called ?column? in your results.
+-- Select the average of home + away goals, multiplied by 3
+SELECT 
+	3 * AVG(home_goal + away_goal)
+FROM matches_2013_2014;
