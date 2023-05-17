@@ -1,0 +1,14 @@
+-- Left join the teams_spain table team_api_id column to the matches_spain table awayteam_id. This allows us to retrieve the away team's identity.
+-- Select team_long_name from teams_spain as opponent and complete the CASE statement from Step 1.
+SELECT 
+	m.date,
+	--Select the team long name column and call it 'opponent'
+	t.team_long_name AS opponent, 
+	-- Complete the CASE statement with an alias
+	CASE WHEN m.home_goal > m.away_goal THEN 'Home win!'
+         WHEN m.home_goal < m.away_goal THEN 'Home loss :('
+         ELSE 'Tie' END AS outcome
+FROM matches_spain AS m
+-- Left join teams_spain onto matches_spain
+LEFT JOIN teams_spain AS t
+ON m.awayteam_id = t.team_api_id;
