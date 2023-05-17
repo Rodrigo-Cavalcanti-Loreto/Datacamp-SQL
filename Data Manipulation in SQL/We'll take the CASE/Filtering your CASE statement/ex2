@@ -1,0 +1,15 @@
+-- Select the season and date that a match was played.
+-- Complete the CASE statement so that only Bologna's home and away wins are identified.
+-- Select the season and date columns
+SELECT 
+	season,
+	date,
+    -- Identify when Bologna won a match
+	CASE WHEN hometeam_id = 9857 
+        AND home_goal > away_goal 
+        THEN 'Bologna Win'
+		WHEN awayteam_id = 9857 
+        AND away_goal > home_goal 
+        THEN 'Bologna Win' 
+		END AS outcome
+FROM matches_italy;
