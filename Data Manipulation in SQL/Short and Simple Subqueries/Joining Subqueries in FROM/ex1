@@ -1,0 +1,9 @@
+-- Create the subquery to be used in the next step, which selects the country ID and match ID (id) from the match table.
+-- Filter the query for matches with greater than or equal to 10 goals.
+SELECT 
+	-- Select the country ID and match ID
+	id, 
+    country_id 
+FROM match
+-- Filter for matches with 10 or more goals in total
+WHERE (home_goal + away_goal) >= 10;
