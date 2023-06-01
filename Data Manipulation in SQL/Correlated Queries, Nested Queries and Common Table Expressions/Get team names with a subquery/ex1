@@ -1,0 +1,10 @@
+-- Create a query that left joins team to match in order to get the identity of the home team.
+-- This becomes the subquery in the next step.
+
+SELECT 
+	m.id, 
+    t.team_long_name AS hometeam
+-- Left join team to match
+FROM match AS m
+LEFT JOIN team as t
+ON m.hometeam_id = team_api_id;
