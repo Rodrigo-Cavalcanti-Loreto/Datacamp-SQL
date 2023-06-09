@@ -1,0 +1,21 @@
+--Calculate the 3-year moving average of medals earned.
+
+WITH russian_medals AS (
+  SELECT
+    year, COUNT(*) AS medals
+  FROM summer_medals
+  WHERE
+    country = 'RUS'
+    AND medal = 'Gold'
+    AND year >= 1980
+  GROUP BY year)
+
+SELECT
+  year, medals,
+  --- Calculate the 3-year moving average of medals earned
+  AVG(medals) OVER
+    (ORDER BY year ASC
+     ROWS BETWEEN 2 PRECEDING
+     AND CURRENT ROW ) AS medals_ma
+FROM russian_medals
+ORDER BY year ASC;
