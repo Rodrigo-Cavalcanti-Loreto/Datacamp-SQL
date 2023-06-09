@@ -1,0 +1,12 @@
+--Return each year's gold medalists in the Men's 69KG weightlifting competition.
+
+SELECT
+  -- Return each year's champions' countries
+  year,
+  country AS champion
+FROM summer_medals
+WHERE
+  discipline = 'Weightlifting' AND
+  event = '69KG' AND
+  gender = 'Men' AND
+  medal = 'Gold';
