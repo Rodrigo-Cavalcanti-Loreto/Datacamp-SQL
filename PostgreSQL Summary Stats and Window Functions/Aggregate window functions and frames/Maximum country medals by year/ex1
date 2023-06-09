@@ -1,0 +1,20 @@
+--Return the year, country, medals, and the maximum medals earned so far for each country, ordered by year in ascending order.
+
+WITH country_medals AS (
+  SELECT
+    year, country, COUNT(*) AS medals
+  FROM summer_medals
+  WHERE
+    country IN ('CHN', 'KOR', 'JPN')
+    AND medal = 'Gold' AND year >= 2000
+  GROUP BY year, country)
+
+SELECT
+  -- Return the max medals earned so far per country
+  year,
+  country,
+  medals,
+  MAX(medals) OVER (PARTITION BY country
+                ORDER BY year ASC) AS max_medals
+FROM country_medals
+ORDER BY country ASC, year ASC;
