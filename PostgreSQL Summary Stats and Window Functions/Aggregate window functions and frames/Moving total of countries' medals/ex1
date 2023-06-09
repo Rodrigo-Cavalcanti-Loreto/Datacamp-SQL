@@ -1,0 +1,18 @@
+--Calculate the 3-year moving sum of medals earned per country.
+
+WITH country_medals AS (
+  SELECT
+    year, country, COUNT(*) AS medals
+  FROM summer_medals
+  GROUP BY year, country)
+
+SELECT
+  year, country, medals,
+  -- Calculate each country's 3-game moving total
+  SUM(medals) OVER
+    (PARTITION BY country
+     ORDER BY year ASC
+     ROWS BETWEEN 2 PRECEDING
+     AND CURRENT ROW) AS medals_mt
+FROM country_medals
+ORDER BY country ASC, year ASC;
