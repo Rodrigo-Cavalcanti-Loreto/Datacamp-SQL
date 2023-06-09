@@ -1,0 +1,22 @@
+--Select the country and year columns, then rank the three countries by how many gold medals they earned per year.
+
+WITH country_awards AS (
+  SELECT
+    country,
+    year,
+    COUNT(*) AS awards
+  FROM summer_medals
+  WHERE
+    country IN ('FRA', 'GBR', 'GER')
+    AND year IN (2004, 2008, 2012)
+    AND medal = 'Gold'
+  GROUP BY country, year)
+
+SELECT
+  -- Select Country and Year
+  country,
+  year,
+  -- Rank by gold medals earned per year
+  RANK() OVER(ORDER BY year ASC):: INTEGER AS rank
+FROM country_awards
+ORDER BY country ASC, year ASC;
