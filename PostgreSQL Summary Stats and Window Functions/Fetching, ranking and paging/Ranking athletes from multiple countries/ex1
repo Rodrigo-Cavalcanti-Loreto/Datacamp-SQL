@@ -1,0 +1,20 @@
+--Rank each country's athletes by the count of medals they've earned -- the higher the count, the higher the rank -- without skipping numbers in case of identical values.
+
+WITH athlete_medals AS (
+  SELECT
+    country, athlete, COUNT(*) AS medals
+  FROM summer_medals
+  WHERE
+    country IN ('JPN', 'KOR')
+    AND year >= 2000
+  GROUP BY country, athlete
+  HAVING COUNT(*) > 1)
+
+SELECT
+  country,
+  -- Rank athletes in each country by the medals they've won
+  athlete,
+  DENSE_RANK() OVER (PARTITION BY country
+                ORDER BY medals DESC) AS rank_n
+FROM athlete_medals
+ORDER BY country ASC, rank_n ASC;
