@@ -1,0 +1,16 @@
+--Rank each athlete by the number of medals they've earned -- the higher the count, the higher the rank -- with identical numbers in case of identical values.
+
+WITH athlete_medals AS (
+  SELECT
+    athlete,
+    COUNT(*) AS medals
+  FROM summer_medals
+  GROUP BY athlete)
+
+SELECT
+  athlete,
+  medals,
+  -- Rank athletes by the medals they've won
+  RANK() OVER (ORDER BY medals DESC) AS rank_n
+FROM athlete_medals
+ORDER BY medals DESC;
