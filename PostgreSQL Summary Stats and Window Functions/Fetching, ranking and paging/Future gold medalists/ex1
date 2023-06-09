@@ -1,0 +1,19 @@
+--For each year, fetch the current gold medalist and the gold medalist 3 competitions ahead of the current row.
+
+WITH discus_medalists AS (
+  SELECT DISTINCT
+    year,
+    athlete
+  FROM summer_medals
+  WHERE medal = 'Gold'
+    AND event = 'Discus Throw'
+    AND gender = 'Women'
+    AND year >= 2000)
+
+SELECT
+  -- For each year, fetch the current and future medalists
+  year,
+  athlete,
+  LEAD(athlete, 3) OVER (ORDER BY year ASC) AS future_champion
+FROM discus_medalists
+ORDER BY year ASC;
