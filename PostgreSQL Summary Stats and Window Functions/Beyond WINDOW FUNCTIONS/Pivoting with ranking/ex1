@@ -1,0 +1,14 @@
+--Count the gold medals that France (FRA), the UK (GBR), and Germany (GER) have earned per country and year.
+
+-- Count the gold medals per country and year
+SELECT
+  country,
+  year,
+  COUNT(*) AS awards
+FROM summer_medals
+WHERE
+  country IN ('FRA', 'GBR', 'GER')
+  AND year IN (2004, 2008, 2012)
+  AND medal = 'Gold'
+GROUP BY country, year
+ORDER BY country ASC, year ASC
