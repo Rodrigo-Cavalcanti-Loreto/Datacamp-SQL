@@ -1,0 +1,17 @@
+--Rank countries by the medals they've been awarded.
+
+WITH country_medals AS (
+  SELECT
+    country,
+    COUNT(*) AS medals
+  FROM summer_medals
+  WHERE year = 2000
+    AND medal = 'Gold'
+  GROUP BY country)
+
+  SELECT
+    country,
+    -- Rank countries by the medals awarded
+    RANK() OVER(ORDER BY medals DESC) AS Rank
+  FROM country_medals
+  ORDER BY Rank ASC;
