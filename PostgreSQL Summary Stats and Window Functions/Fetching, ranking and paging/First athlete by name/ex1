@@ -1,0 +1,16 @@
+--Return all athletes and the first athlete ordered by alphabetical order.
+
+WITH all_male_medalists AS (
+  SELECT DISTINCT
+    athlete
+  FROM summer_medals
+  WHERE medal = 'Gold'
+    AND gender = 'Men')
+
+SELECT
+  -- Fetch all athletes and the first athlete alphabetically
+  athlete,
+  FIRST_VALUE(athlete) OVER (
+    ORDER BY athlete ASC
+  ) AS first_athlete
+FROM all_male_medalists;
