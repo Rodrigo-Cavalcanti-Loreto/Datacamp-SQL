@@ -1,0 +1,21 @@
+--Return the year, medals earned, and the maximum medals earned, comparing only the current year and the next year.
+
+WITH scandinavian_medals AS (
+  SELECT
+    year, COUNT(*) AS medals
+  FROM summer_medals
+  WHERE
+    country IN ('DEN', 'NOR', 'FIN', 'SWE', 'ISL')
+    AND medal = 'Gold'
+  GROUP BY year)
+
+SELECT
+  -- Select each year's medals
+  year,
+  medals,
+  -- Get the max of the current and next years'  medals
+  MAX(medals) OVER (ORDER BY year ASC
+             ROWS BETWEEN CURRENT ROW 
+             AND 1 FOLLOWING) AS max_medals
+FROM scandinavian_medals
+ORDER BY year ASC;
