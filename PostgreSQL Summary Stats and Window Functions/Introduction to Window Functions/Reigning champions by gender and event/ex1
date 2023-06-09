@@ -1,0 +1,20 @@
+--Return the previous champions of each year's events by gender and event.
+
+WITH athletics_gold AS (
+  SELECT DISTINCT
+    gender, year, event, country
+  FROM summer_medals
+  WHERE
+    year >= 2000 AND
+    discipline = 'Athletics' AND
+    event IN ('100M', '10000M') AND
+    medal = 'Gold')
+
+SELECT
+  gender, year, event,
+  country AS champion,
+  -- Fetch the previous year's champion by gender and event
+  LAG(country, 1) OVER (PARTITION BY gender, event
+            ORDER BY year ASC) AS last_champion
+FROM athletics_gold
+ORDER BY event ASC, gender ASC, year ASC;
