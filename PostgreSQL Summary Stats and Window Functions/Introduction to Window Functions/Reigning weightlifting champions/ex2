@@ -1,0 +1,21 @@
+--Having wrapped the previous query in the Weightlifting_Gold CTE, get the previous year's champion for each year.
+
+WITH weightlifting_gold AS (
+  SELECT
+    -- Return each year's champions' countries
+    year,
+    Country AS champion
+  FROM summer_medals
+  WHERE
+    discipline = 'Weightlifting' AND
+    event = '69KG' AND
+    gender = 'Men' AND
+    medal = 'Gold')
+
+SELECT
+  year, champion,
+  -- Fetch the previous year's champion
+  LAG(champion, 1) OVER
+    (ORDER BY year ASC) AS last_champion
+FROM weightlifting_gold
+ORDER BY year ASC;
