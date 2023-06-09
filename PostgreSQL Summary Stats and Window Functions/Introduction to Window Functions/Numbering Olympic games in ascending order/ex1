@@ -1,1 +1,12 @@
-Fazer valer esse aqui também
+-- Assign a number to each year in which Summer Olympic games were held.
+
+SELECT
+  year,
+  -- Assign numbers to each year
+  ROW_NUMBER() OVER() AS row_n
+FROM (
+  SELECT DISTINCT year
+  FROM summer_medals
+  ORDER BY year ASC
+) AS years
+ORDER BY year ASC;
