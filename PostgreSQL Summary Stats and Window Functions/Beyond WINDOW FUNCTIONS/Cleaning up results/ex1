@@ -1,0 +1,14 @@
+--Turn the nulls in the Country column to All countries, and the nulls in the Gender column to All genders.
+
+SELECT
+  -- Replace the nulls in the columns with meaningful text
+  COALESCE(country, 'All countries') AS country,
+  COALESCE(gender, 'All genders') AS gender,
+  COUNT(*) AS awards
+FROM summer_medals
+WHERE
+  year = 2004
+  AND medal = 'Gold'
+  AND country IN ('DEN', 'NOR', 'SWE')
+GROUP BY ROLLUP(country, gender)
+ORDER BY country ASC, gender ASC;
