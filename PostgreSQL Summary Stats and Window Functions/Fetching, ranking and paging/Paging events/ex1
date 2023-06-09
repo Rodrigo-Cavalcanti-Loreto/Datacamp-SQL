@@ -1,0 +1,12 @@
+--Split the distinct events into exactly 111 groups, ordered by event in alphabetical order.
+
+WITH events AS (
+  SELECT DISTINCT event
+  FROM summer_medals)
+  
+SELECT
+  --- Split up the distinct events into 111 unique groups
+  event,
+  NTILE(111) OVER (ORDER BY event ASC) AS page
+FROM events
+ORDER BY event ASC;
