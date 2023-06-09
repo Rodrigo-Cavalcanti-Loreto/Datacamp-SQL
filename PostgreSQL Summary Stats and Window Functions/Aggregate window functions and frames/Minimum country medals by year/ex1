@@ -1,0 +1,17 @@
+--Return the year, medals earned, and minimum medals earned so far.
+
+WITH france_medals AS (
+  SELECT
+    year, COUNT(*) AS medals
+  FROM summer_medals
+  WHERE
+    country = 'FRA'
+    AND medal = 'Gold' AND year >= 2000
+  GROUP BY year)
+
+SELECT
+  year,
+  medals,
+  MIN(medals) OVER (ORDER BY year ASC) AS min_medals
+FROM france_medals
+ORDER BY year ASC;
