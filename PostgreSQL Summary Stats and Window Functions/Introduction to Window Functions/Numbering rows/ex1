@@ -1,1 +1,8 @@
--- Vamo simbora, mais um lindo dia de luta
+-- Number each row in the dataset.
+
+SELECT
+  *,
+  -- Assign numbers to each row
+  ROW_NUMBER() OVER() AS row_n
+FROM summer_medals
+ORDER BY row_n ASC;
