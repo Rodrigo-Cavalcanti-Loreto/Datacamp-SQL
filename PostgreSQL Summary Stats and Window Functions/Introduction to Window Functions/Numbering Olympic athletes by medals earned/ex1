@@ -1,0 +1,9 @@
+-- For each athlete, count the number of medals he or she has earned.
+
+SELECT
+  -- Count the number of medals each athlete has earned
+  athlete,
+  COUNT(medal) AS medals
+FROM summer_medals
+GROUP BY athlete
+ORDER BY medals DESC;
