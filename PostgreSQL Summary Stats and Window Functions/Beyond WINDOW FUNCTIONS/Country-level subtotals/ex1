@@ -1,0 +1,16 @@
+--Count the gold medals awarded per country and gender.
+--Generate Country-level gold award counts.
+
+-- Count the gold medals per country and gender
+SELECT
+  country,
+  gender,
+  COUNT(*) AS gold_awards
+FROM summer_medals
+WHERE
+  year = 2004
+  AND medal = 'Gold'
+  AND country IN ('DEN', 'NOR', 'SWE')
+-- Generate Country-level subtotals
+GROUP BY country, ROLLUP(gender)
+ORDER BY country ASC, gender ASC;
