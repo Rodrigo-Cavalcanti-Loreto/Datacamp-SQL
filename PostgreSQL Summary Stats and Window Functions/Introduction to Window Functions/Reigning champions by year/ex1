@@ -1,0 +1,18 @@
+--Return the previous champions of each year's event by gender.
+
+WITH tennis_gold AS (
+  SELECT 
+    DISTINCT gender, year, country
+  FROM summer_medals
+  WHERE
+    year >= 2000 AND
+    event = 'Javelin Throw' AND
+    medal = 'Gold')
+
+SELECT
+  gender, year,
+  country AS champion,
+  -- Fetch the previous year's champion by gender
+  LAG(country, 1) OVER (PARTITION BY gender ORDER BY year ASC) AS last_champion
+FROM tennis_gold
+ORDER BY gender ASC, year ASC;
