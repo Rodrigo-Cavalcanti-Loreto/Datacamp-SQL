@@ -1,0 +1,15 @@
+--Count the medals awarded per gender and medal type.
+--Generate all possible group-level counts (per gender and medal type subtotals and the grand total).
+
+-- Count the medals per gender and medal type
+SELECT
+  gender,
+  medal,
+  COUNT(*) AS awards
+FROM summer_medals
+WHERE
+  year = 2012
+  AND country = 'RUS'
+-- Get all possible group-level subtotals
+GROUP BY CUBE(gender, medal)
+ORDER BY gender ASC, medal ASC;
