@@ -1,0 +1,21 @@
+--Return the athletes, medals earned, and the maximum medals earned, comparing only the last two and current athletes, ordering by athletes' names in alphabetical order.
+
+WITH chinese_medals AS (
+  SELECT
+    athlete, COUNT(*) AS medals
+  FROM summer_medals
+  WHERE
+    country = 'CHN' AND medal = 'Gold'
+    AND year >= 2000
+  GROUP BY athlete)
+
+SELECT
+  -- Select the athletes and the medals they've earned
+  athlete,
+  medals,
+  -- Get the max of the last two and current rows' medals 
+  MAX(medals) OVER (ORDER BY athlete ASC
+            ROWS BETWEEN 2 PRECEDING
+            AND CURRENT ROW) AS max_medals
+FROM chinese_medals
+ORDER BY athlete ASC;
