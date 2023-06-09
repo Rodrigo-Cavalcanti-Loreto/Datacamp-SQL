@@ -1,0 +1,15 @@
+--Split the athletes into top, middle, and bottom thirds based on their count of medals.
+
+WITH athlete_medals AS (
+  SELECT athlete, COUNT(*) AS medals
+  FROM summer_medals
+  GROUP BY athlete
+  HAVING COUNT(*) > 1)
+  
+SELECT
+  athlete,
+  medals,
+  -- Split athletes into thirds by their earned medals
+  NTILE(3) OVER(ORDER BY medals DESC) AS third
+FROM athlete_medals
+ORDER BY medals DESC, athlete ASC;
