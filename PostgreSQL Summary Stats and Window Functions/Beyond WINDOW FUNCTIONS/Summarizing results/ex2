@@ -1,0 +1,23 @@
+--Return the top 3 countries by medals awarded as one comma-separated string.
+
+WITH country_medals AS (
+  SELECT
+    country,
+    COUNT(*) AS medals
+  FROM summer_medals
+  WHERE year = 2000
+    AND medal = 'Gold'
+  GROUP BY country),
+
+  country_ranks AS (
+  SELECT
+    country,
+    RANK() OVER (ORDER BY medals DESC) AS rank
+  FROM country_medals
+  ORDER BY rank ASC)
+
+-- Compress the countries column
+SELECT STRING_AGG(country, ', ')
+FROM country_ranks
+-- Select only the top three ranks
+WHERE rank<=3;
