@@ -1,0 +1,16 @@
+--Having wrapped the previous query in the Athlete_Medals CTE, rank each athlete by the number of medals they've earned.
+
+WITH athlete_medals AS (
+  SELECT
+    -- Count the number of medals each athlete has earned
+    athlete,
+    COUNT(*) AS medals
+  FROM summer_medals
+  GROUP BY athlete)
+
+SELECT
+  -- Number each athlete by how many medals they've earned
+  athlete,
+  ROW_NUMBER() OVER (ORDER BY medals DESC) AS row_n
+FROM athlete_medals
+ORDER BY medals DESC;
