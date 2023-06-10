@@ -1,0 +1,6 @@
+--Now select a timestamp five days from now and alias it as five_days_from_now.
+
+
+SELECT
+	CURRENT_TIMESTAMP::timestamp AS right_now,
+    INTERVAL '5 days' + CURRENT_TIMESTAMP AS five_days_from_now;
