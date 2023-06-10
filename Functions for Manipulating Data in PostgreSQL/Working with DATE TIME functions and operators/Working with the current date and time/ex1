@@ -1,0 +1,4 @@
+--Use NOW() to select the current timestamp with timezone.
+
+-- Select the current timestamp
+SELECT NOW();
