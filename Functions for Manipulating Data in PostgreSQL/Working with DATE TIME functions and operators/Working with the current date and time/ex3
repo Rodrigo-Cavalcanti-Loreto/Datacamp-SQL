@@ -1,0 +1,4 @@
+--Now, let's use the CAST() function to eliminate the timezone from the current timestamp.
+
+--Select the current timestamp without a timezone
+SELECT CAST( NOW() AS timestamp ):
