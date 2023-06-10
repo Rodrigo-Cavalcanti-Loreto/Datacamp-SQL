@@ -1,0 +1,7 @@
+--Select the title and special features from the film table and compare the results between the two columns.
+
+-- Select the title and special features column 
+SELECT 
+  title, 
+  special_features
+FROM film;
