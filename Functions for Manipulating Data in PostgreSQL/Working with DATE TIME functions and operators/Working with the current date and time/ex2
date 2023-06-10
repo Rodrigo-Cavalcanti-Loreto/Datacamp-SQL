@@ -1,0 +1,4 @@
+--Select the current date without any time value.
+
+-- Select the current date
+SELECT CURRENT_DATE;
