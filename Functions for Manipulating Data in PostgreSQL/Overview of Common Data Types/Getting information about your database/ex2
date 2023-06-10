@@ -1,0 +1,7 @@
+--Select all columns from the INFORMATION_SCHEMA.COLUMNS system database. Limit by table_name to actor
+
+
+ -- Select all columns from the COLUMNS system database
+ SELECT * 
+ FROM INFORMATION_SCHEMA.COLUMNS 
+ WHERE table_name = 'actor';
