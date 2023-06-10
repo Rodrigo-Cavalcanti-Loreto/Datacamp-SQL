@@ -1,0 +1,5 @@
+--Select the current timestamp without timezone and alias it as right_now.
+
+
+--Select the current timestamp without timezone
+SELECT CURRENT_TIMESTAMP::timestamp AS right_now;
