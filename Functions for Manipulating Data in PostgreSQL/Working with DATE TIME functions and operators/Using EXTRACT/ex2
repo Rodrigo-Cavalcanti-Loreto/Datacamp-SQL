@@ -1,0 +1,10 @@
+--Count the total number of rentals by day of the week.
+
+
+-- Extract day of week from rental_date
+SELECT 
+  EXTRACT(dow FROM rental_date) AS dayofweek, 
+  -- Count the number of rentals
+  COUNT(*) as rentals 
+FROM rental 
+GROUP BY 1;
