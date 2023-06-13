@@ -1,0 +1,9 @@
+--Select the title and inventory_id columns from the film and inventory tables in the database.
+
+-- Select the film title and inventory ids
+SELECT 
+	f.title, 
+    i.inventory_id
+FROM film AS f 
+	-- Join the film table to the inventory table
+	INNER JOIN inventory AS i ON f.film_id=i.film_id;
