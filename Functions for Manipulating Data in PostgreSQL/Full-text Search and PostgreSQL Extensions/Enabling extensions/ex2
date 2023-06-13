@@ -2,5 +2,5 @@
 
 
 -- Select all rows extensions
-SELECT extname 
+SELECT * 
 FROM pg_extension;
