@@ -2,5 +2,5 @@
 
 SELECT 
   -- Replace whitespace in the film title with an underscore
-  REPLACE(title, ' ', '@') AS title
+  REPLACE(title, ' ', '_') AS title
 FROM film;
