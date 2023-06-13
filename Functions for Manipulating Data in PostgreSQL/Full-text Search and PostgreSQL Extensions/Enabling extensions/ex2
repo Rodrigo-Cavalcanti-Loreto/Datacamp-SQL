@@ -1,0 +1,6 @@
+--Now confirm that both fuzzystrmatch and pg_trgm are enabled by selecting all rows from the appropriate system table.
+
+
+-- Select all rows extensions
+SELECT extname 
+FROM pg_extension;
