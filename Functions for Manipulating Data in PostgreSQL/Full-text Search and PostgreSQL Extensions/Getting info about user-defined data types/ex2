@@ -1,0 +1,6 @@
+--Select all columns from the pg_type table where the type name is equal to mpaa_rating.
+
+
+SELECT *
+FROM pg_type
+WHERE typname='mpaa_rating'
