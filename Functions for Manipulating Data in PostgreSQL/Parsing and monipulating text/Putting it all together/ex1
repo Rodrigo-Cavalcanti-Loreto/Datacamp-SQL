@@ -5,7 +5,7 @@
 SELECT 
   UPPER(c.name) || ': ' || f.title AS film_category, 
   -- Truncate the description without cutting off a word
-  LPAD(description, 50 - 
+  LEFT(description, 50 - 
     -- Subtract the position of the first whitespace character
     POSITION(
       ' ' IN REVERSE(LEFT(description, 50))
