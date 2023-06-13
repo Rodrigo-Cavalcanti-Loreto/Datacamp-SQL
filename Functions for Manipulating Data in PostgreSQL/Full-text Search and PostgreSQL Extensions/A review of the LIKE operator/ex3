@@ -1,0 +1,6 @@
+--Finally, select all records that contain the word 'GOLD'.
+
+SELECT *
+FROM film
+-- Select only records that contain the word 'GOLD'
+WHERE title LIKE '%GOLD%';
