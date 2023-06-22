@@ -1,0 +1,39 @@
+WITH stack AS (
+    SELECT COUNT(*) OVER() AS total_linhas_stack, *
+    FROM stackoverflow
+    LIMIT 1
+),
+comp AS(
+    SELECT COUNT(*) OVER() AS total_linhas_c, *
+    FROM company
+    LIMIT 1
+),
+tag_c AS(
+    SELECT COUNT(*) OVER() AS total_linhas_tag_c, *
+    FROM tag_company
+    LIMIT 1
+),
+tag_t AS(
+    SELECT COUNT(*) OVER() AS total_linhas_tag_t, *
+    FROM tag_type
+    LIMIT 1
+),
+fortune AS(
+    SELECT COUNT(*) OVER() AS total_linhas_fortune, *
+    FROM fortune500
+    LIMIT 1
+)
+
+SELECT *
+--FROM stack;
+--FROM comp;
+--FROM tag_c;
+--FROM tag_t;
+FROM fortune;
+
+/*stackoverflow - 45238 row, 7 columns
+Company - 14 row, 5
+tag_company - 56 row, 2
+tag_type - 61 row, 3
+fortune500 - 500 row, 15
+*/
