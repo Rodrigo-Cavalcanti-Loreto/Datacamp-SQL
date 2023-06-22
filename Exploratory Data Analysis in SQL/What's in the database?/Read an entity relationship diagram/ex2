@@ -1,0 +1,3 @@
+--First, using the tag_type table, count the number of tags with each type.
+--Order the results to find the most common tag type.
+
