@@ -1,0 +1,3 @@
+--Now cast numbers that appear as text as numeric.
+Note: 1e3 is scientific notation.
+
