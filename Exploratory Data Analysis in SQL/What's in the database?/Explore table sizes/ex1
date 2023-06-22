@@ -1,3 +1,6 @@
+--Count the number of columns in a table by selecting a few rows and manually counting the columns in the result.
+--Which table has the most rows? Which table has the most columns?
+
 WITH stack AS (
     SELECT COUNT(*) OVER() AS total_linhas_stack, *
     FROM stackoverflow
