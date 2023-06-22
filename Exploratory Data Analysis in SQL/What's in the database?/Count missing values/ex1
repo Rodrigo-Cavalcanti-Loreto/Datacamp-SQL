@@ -1,3 +1,5 @@
+--First, figure out how many rows are in fortune500 by counting them.
+
 -- Select the count of the number of rows
 SELECT COUNT(*)
 FROM fortune500;
