@@ -1,0 +1,3 @@
+-- Select the count of the number of rows
+SELECT COUNT(*)
+FROM fortune500;
