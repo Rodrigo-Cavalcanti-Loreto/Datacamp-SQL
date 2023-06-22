@@ -1,0 +1,6 @@
+--Repeat for the profits_change column.
+
+-- Select the count of profits_change, 
+-- subtract from total number of rows, and alias as missing
+SELECT COUNT(*) - COUNT(profits_change) AS missing
+FROM fortune500;
