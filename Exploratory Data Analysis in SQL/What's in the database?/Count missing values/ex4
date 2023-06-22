@@ -1,0 +1,6 @@
+--Repeat for the industry column.
+
+-- Select the count of industry, 
+-- subtract from total number of rows, and alias as missing
+SELECT COUNT(*) - COUNT(industry) AS missing
+FROM fortune500;
