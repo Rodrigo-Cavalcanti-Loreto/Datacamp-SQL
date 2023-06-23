@@ -1,0 +1,4 @@
+--Start by writing a subquery to compute the max() of question_count per tag; alias the subquery result as maxval.
+--Then compute the standard deviation of maxval with stddev().
+--Compute the min(), max(), and avg() of maxval too.
+
