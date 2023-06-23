@@ -1,0 +1,3 @@
+--Using the profit80 table you created in step 1, select companies that have profits greater than pct80.
+--Select the title, sector, profits from fortune500, as well as the ratio of the company's profits to the 80th percentile profit.
+
