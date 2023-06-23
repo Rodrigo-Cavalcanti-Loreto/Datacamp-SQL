@@ -1,0 +1,5 @@
+--Select all rows and columns from the correlations table to view the correlation matrix.
+
+--First, you will need to round each correlation to 2 decimal places.
+--The output of corr() is of type double precision, so you will need to also cast columns to numeric.
+
