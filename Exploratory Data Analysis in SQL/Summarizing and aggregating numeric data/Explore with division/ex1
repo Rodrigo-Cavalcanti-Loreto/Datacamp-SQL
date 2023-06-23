@@ -1,0 +1,2 @@
+--Exclude rows where question_count is 0 to avoid a divide by zero error.
+--Limit the result to 10 rows.
