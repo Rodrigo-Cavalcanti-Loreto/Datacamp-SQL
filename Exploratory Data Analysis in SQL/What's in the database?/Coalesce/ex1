@@ -5,12 +5,12 @@
 
 -- Use coalesce
 SELECT COALESCE(industry, sector, 'Unknown') AS industry2,
-       -- Don't forget to count!
+-- Don't forget to count!
        COUNT(*) 
-  FROM fortune500 
+FROM fortune500 
 -- Group by what? (What are you counting by?)
- GROUP BY industry2, sector
+GROUP BY industry2, sector
 -- Order results to see most common first
- ORDER BY count DESC
+ORDER BY count DESC
 -- Limit results to get just the one value you want
 LIMIT 1;
