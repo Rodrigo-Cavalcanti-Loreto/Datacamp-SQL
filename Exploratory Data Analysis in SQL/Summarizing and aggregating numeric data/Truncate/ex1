@@ -1,0 +1,12 @@
+--Use trunc() to truncate employees to the 100,000s (5 zeros).
+--Count the number of observations with each truncated value.
+
+-- Truncate employees
+SELECT TRUNC(employees, -5) AS employee_bin,
+       -- Count number of companies with each truncated value
+       COUNT(*)
+FROM fortune500
+-- Use alias to group
+GROUP BY employee_bin
+-- Use alias to order
+ORDER BY employee_bin;
