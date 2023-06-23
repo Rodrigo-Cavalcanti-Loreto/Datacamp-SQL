@@ -2,3 +2,10 @@
 --Compute the correlation between revenues and assets.
 --Compute the correlation between revenues and equity.
 
+-- Correlation between revenues and profit
+SELECT CORR(revenues, profits) AS rev_profits,
+	   -- Correlation between revenues and assets
+       CORR(revenues, assets) AS rev_assets,
+       -- Correlation between revenues and equity
+       CORR(revenues, equity) AS rev_equity 
+FROM fortune500;
