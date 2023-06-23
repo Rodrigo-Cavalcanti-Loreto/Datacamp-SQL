@@ -1,0 +1,2 @@
+--First, create a temporary table called startdates with each tag and the min() date for the tag in stackoverflow.
+
