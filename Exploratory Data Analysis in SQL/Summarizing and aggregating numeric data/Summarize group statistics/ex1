@@ -2,3 +2,16 @@
 --Then compute the standard deviation of maxval with stddev().
 --Compute the min(), max(), and avg() of maxval too.
 
+-- Compute standard deviation of maximum values
+SELECT STDDEV(max_val),
+	   -- min
+       MIN(max_val),
+       -- max
+       MAX(max_val),
+       -- avg
+       AVG(max_val)
+-- Subquery to compute max of question_count by tag
+FROM (SELECT MAX(question_count) AS max_val
+      FROM stackoverflow
+      -- Compute max by...
+      GROUP BY tag) AS max_results; -- alias for subquery
