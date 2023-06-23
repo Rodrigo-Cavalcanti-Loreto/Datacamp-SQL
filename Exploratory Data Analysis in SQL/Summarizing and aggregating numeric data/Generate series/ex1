@@ -1,3 +1,10 @@
 --Start by selecting the minimum and maximum of the question_count column for the tag 'dropbox' so you know the range of values to cover with the bins.
 
 
+-- Select the min and max of question_count
+SELECT MIN(question_count), 
+       MAX(question_count)
+-- From what table?
+FROM stackoverflow
+-- For tag dropbox
+WHERE tag = 'dropbox';
