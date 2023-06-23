@@ -2,6 +2,6 @@
 
 -- Count rows 
 SELECT COUNT(*)
-  FROM fortune500
- -- Where...
- WHERE revenues_change > 0;
+FROM fortune500
+-- Where...
+WHERE revenues_change > 0;
