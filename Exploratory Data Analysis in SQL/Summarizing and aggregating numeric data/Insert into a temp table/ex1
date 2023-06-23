@@ -3,3 +3,14 @@
 --Compute the correlation between profits and each of the three variables (i.e. correlate profits with profits, profits with profits_change, etc).
 --Alias columns by the name of the variable for which the correlation with profits is being computed.
 
+DROP TABLE IF EXISTS correlations;
+
+-- Create temp table 
+CREATE TEMP TABLE correlations AS
+-- Select each correlation
+SELECT 'profits'::varchar AS measure,
+       -- Compute correlations
+       CORR(profits, profits) AS profits,
+       CORR(profits, profits_change) AS profits_change,
+       CORR(profits, revenues_change) AS revenues_change
+FROM fortune500;
