@@ -1,0 +1,5 @@
+--Create a temp table correlations.
+
+--Compute the correlation between profits and each of the three variables (i.e. correlate profits with profits, profits with profits_change, etc).
+--Alias columns by the name of the variable for which the correlation with profits is being computed.
+
