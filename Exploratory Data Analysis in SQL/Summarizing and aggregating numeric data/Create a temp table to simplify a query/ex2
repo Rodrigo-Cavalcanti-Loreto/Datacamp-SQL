@@ -1,0 +1,4 @@
+--Join startdates to stackoverflow twice using different table aliases.
+--For each tag, select mindate, question_count on the mindate, and question_count on 2018-09-25 (the max date).
+--Compute the change in question_count over time.
+
