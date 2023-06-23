@@ -1,0 +1,3 @@
+--Repeat step 1 for companies with < 100,000 employees (most common).
+--This time, truncate employees to the 10,000s place.
+
