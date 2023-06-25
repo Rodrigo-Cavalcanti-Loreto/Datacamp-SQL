@@ -1,2 +1,8 @@
 --Use ILIKE to count rows in evanston311 where the description contains 'trash' or 'garbage' regardless of case.
 
+-- Count rows
+SELECT COUNT(*)
+FROM evanston311
+-- Where description includes trash or garbage
+WHERE description ILIKE '%trash%'
+  OR description ILIKE '%garbage%';
