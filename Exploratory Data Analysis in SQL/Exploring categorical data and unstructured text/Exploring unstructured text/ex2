@@ -1,2 +1,8 @@
 --category values are in title case. Use LIKE to find category values with 'Trash' or 'Garbage' in them.
 
+-- Select categories containing Trash or Garbage
+SELECT category
+FROM evanston311
+-- Use LIKE
+WHERE category LIKE '%Trash%' 
+  OR category LIKE '%Garbage%';
