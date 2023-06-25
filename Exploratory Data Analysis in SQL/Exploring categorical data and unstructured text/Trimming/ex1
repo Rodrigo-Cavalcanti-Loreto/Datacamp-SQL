@@ -1,0 +1,4 @@
+--Trim digits 0-9, #, /, ., and spaces from the beginning and end of street.
+--Select distinct original street value and the corrected street value.
+--Order the results by the original street value.
+
