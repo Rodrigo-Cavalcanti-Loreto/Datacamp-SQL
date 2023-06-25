@@ -1,0 +1,3 @@
+--UPDATE standardized values LIKE 'Trash%Cart' to 'Trash Cart'.
+--UPDATE standardized values of 'Snow Removal/Concerns' and 'Snow/Ice/Hazard Removal' to 'Snow Removal'.
+
