@@ -1,0 +1,4 @@
+--Select the first 50 characters of description with '...' concatenated on the end where the length() of the description is greater than 50 characters. Otherwise just select the description as is.
+--Select only descriptions that begin with the word 'I' and not the letter 'I'.
+--For example, you would want to select "I like using SQL!", but would not want to select "In this course we use SQL!".
+
