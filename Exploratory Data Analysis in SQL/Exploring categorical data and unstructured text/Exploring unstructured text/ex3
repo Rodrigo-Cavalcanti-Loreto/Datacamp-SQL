@@ -1,0 +1,11 @@
+--Count rows where the description includes 'trash' or 'garbage' but the category does not.
+
+-- Count rows
+SELECT COUNT(*)
+FROM evanston311 
+-- description contains trash or garbage (any case)
+WHERE (description LIKE '%trash%'
+  OR description LIKE '%garbage%') 
+-- category does not contain Trash or Garbage
+  AND category NOT LIKE '%Trash%'
+  AND category NOT LIKE '%Garbage%';
