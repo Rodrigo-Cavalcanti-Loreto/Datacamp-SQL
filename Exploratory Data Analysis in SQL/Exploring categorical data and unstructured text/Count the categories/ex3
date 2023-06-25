@@ -1,3 +1,9 @@
 --How many distinct values of source appear in at least 100 rows?
 
 
+-- Find values of source that appear in at least 100 rows
+-- Also get the count of each value
+SELECT source, COUNT (*)
+FROM evanston311
+GROUP BY source
+HAVING COUNT(*) >= 100;
