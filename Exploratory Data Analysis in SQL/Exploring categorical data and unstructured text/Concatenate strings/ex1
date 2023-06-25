@@ -1,3 +1,7 @@
 --Concatenate house_num, a space ' ', and street into a single value using the concat().
 --Use a trim function to remove any spaces from the start of the concatenated value.
 
+-- Concatenate house_num, a space, and street
+-- and trim spaces from the start of the result
+SELECT TRIM(CONCAT(house_num, ' ', street)) AS address
+FROM evanston311;
