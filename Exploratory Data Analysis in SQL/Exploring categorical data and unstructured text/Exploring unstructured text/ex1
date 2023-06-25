@@ -1,0 +1,2 @@
+--Use ILIKE to count rows in evanston311 where the description contains 'trash' or 'garbage' regardless of case.
+
