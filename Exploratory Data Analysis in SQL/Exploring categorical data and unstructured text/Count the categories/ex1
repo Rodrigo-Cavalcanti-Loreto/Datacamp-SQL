@@ -1,2 +1,6 @@
 --How many rows does each priority level have?
 
+-- Select the count of each level of priority
+SELECT priority, COUNT(*)
+FROM evanston311
+GROUP BY priority;
