@@ -1,0 +1,9 @@
+SELECT CASE WHEN zipcount < 255 THEN 'other'
+    ELSE zip
+    END AS zip_recoded,
+    SUM(zipcount) AS zipsum
+FROM (SELECT zip, COUNT(*) AS zipcount
+        FROM evanston311
+        GROUP BY zip) as fullcounts
+GROUP BY zip_recoded
+ORDER BY zipsum DESC;
