@@ -1,0 +1,3 @@
+--Use split_part() to select the first word in street; alias the result as street_name.
+--Also select the count of each value of street_name.
+
