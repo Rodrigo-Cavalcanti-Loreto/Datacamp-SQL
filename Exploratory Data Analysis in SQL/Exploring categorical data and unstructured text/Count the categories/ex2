@@ -5,4 +5,4 @@
 SELECT zip, COUNT(*)
 FROM evanston311
 GROUP BY zip
-HAVING COUNT(zip) > 100; 
+HAVING COUNT(*) >= 100; 
