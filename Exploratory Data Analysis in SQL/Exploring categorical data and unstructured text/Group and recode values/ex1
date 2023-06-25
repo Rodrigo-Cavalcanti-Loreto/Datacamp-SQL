@@ -1,0 +1,2 @@
+--Create recode with a standardized column; use split_part() and then rtrim() to remove any remaining whitespace on the result of split_part().
+
