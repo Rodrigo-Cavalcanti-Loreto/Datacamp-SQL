@@ -1,0 +1,2 @@
+--category values are in title case. Use LIKE to find category values with 'Trash' or 'Garbage' in them.
+
