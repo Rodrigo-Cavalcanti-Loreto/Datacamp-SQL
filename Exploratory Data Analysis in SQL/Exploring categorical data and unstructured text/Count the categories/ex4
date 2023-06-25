@@ -5,5 +5,5 @@
 SELECT street, COUNT(*)
 FROM evanston311
 GROUP BY street
-ORDER BY COUNT(*)
+ORDER BY COUNT(*) DESC
 LIMIT 5;
