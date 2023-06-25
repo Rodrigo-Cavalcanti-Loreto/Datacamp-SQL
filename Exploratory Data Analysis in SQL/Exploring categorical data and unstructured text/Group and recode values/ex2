@@ -17,8 +17,8 @@ UPDATE recode
 -- Update to group snow removal values
 UPDATE recode 
    SET standardized='Snow Removal' 
- WHERE standardized LIKE 'Snow Removal/Concerns'
-  AND standardized LIKE 'Snow/Ice/Hazard Removal';
+ WHERE standardized LIKE 'Snow%Removal%'
+  OR standardized LIKE 'Snow/Ice/Hazard Removal';
     
 -- Examine effect of updates
 SELECT DISTINCT standardized 
