@@ -1,2 +1,8 @@
 --How many distinct values of zip appear in at least 100 rows?
 
+-- Find values of zip that appear in at least 100 rows
+-- Also get the count of each value
+SELECT zip, COUNT(zip)
+FROM evanston311
+GROUP BY zip
+HAVING COUNT(zip) > 100; 
