@@ -1,2 +1,5 @@
 --Using now(), find out how old the most recent evanston311 request was created.
 
+-- How old is the most recent request?
+SELECT NOW() - MAX(date_created)
+FROM evanston311;
