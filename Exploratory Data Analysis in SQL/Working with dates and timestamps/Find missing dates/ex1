@@ -1,0 +1,5 @@
+--Write a subquery using generate_series() to get all dates between the min() and max() date_created in evanston311.
+--Write another subquery to select all values of date_created as dates from evanston311.
+--Both subqueries should produce values of type date (look for the ::).
+--Select dates (day) from the first subquery that are NOT IN the results of the second subquery. This gives you days that are not in date_created.
+
