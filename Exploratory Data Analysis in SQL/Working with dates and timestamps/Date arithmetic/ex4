@@ -1,2 +1,5 @@
 --Select the current timestamp and the current timestamp plus 5 minutes.
 
+-- Select the current timestamp, 
+-- and the current timestamp + 5 minutes
+SELECT NOW() + '5 minutes'::interval;
