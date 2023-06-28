@@ -1,0 +1,4 @@
+--Join the indicators table to evanston311, selecting the proportion of reports including an email or phone grouped by priority.
+--Include adjustments to account for issues arising from integer division.
+
+
