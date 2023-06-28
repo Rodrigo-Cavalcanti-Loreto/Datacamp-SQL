@@ -1,2 +1,4 @@
 --Add 100 days to the current timestamp.
 
+-- Add 100 days to the current timestamp
+SELECT now() + '100 days'::interval;
