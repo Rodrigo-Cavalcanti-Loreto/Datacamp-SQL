@@ -1,0 +1,2 @@
+--Count the number of Evanston 311 requests created on January 31, 2017 by casting date_created to a date.
+-- Count requests created on January 31, 2017
