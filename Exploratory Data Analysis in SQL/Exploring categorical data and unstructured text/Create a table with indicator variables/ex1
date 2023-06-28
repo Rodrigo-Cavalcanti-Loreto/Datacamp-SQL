@@ -1,0 +1,5 @@
+--Create a temp table indicators from evanston311 with three columns: id, email, and phone.
+--Use LIKE comparisons to detect the email and phone patterns that are in the description, and cast the result as an integer with CAST().
+--Your phone indicator should use a combination of underscores _ and dashes - to represent a standard 10-digit phone number format.
+--Remember to start and end your patterns with % so that you can locate the pattern within other text!
+
