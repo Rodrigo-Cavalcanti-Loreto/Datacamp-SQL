@@ -1,2 +1,5 @@
 --Subtract the minimum date_created from the maximum date_created.
 
+-- Subtract the min date_created from the max
+SELECT MAX(date_created) - MIN(date_created)
+FROM evanston311;
