@@ -1,1 +1,8 @@
 --Count the number of Evanston 311 requests created on February 29, 2016 by using >= and < operators.
+
+
+-- Count requests created on February 29, 2016
+SELECT count(*)
+FROM evanston311 
+WHERE date_created >= '2016-02-29 00:00:00' 
+  AND date_created < '2016-03-01 00:00:00';
