@@ -1,3 +1,9 @@
 --During what hours are requests usually completed? Count requests completed by hour.
 --Order the results by hour.
 
+-- Count requests completed by hour
+SELECT DATE_PART('hour',date_completed) AS hour,
+       COUNT(*)
+FROM evanston311
+GROUP BY hour
+ORDER BY count DESC;
