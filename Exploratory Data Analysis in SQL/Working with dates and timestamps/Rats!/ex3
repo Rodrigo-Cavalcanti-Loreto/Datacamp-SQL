@@ -1,0 +1,3 @@
+--Get corr() between avg. completion time and monthly requests. EXTRACT(epoch FROM interval) returns seconds in interval.
+
+
