@@ -1,0 +1,4 @@
+--Use generate_series() to create bins of 6 month intervals. Recall that the upper bin values are exclusive, so the values need to be one day greater than the last day to be included in the bin.
+--Notice how in the sample code, the first bin value of the upper bound is July 1st, and not June 30th.
+--Use the same approach when creating the last bin values of the lower and upper bounds (i.e. for 2018).
+
