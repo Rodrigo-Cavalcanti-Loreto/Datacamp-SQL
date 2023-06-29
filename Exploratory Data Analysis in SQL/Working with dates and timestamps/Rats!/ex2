@@ -1,0 +1,2 @@
+--Compute average completion time per category excluding the longest 5% of requests (outliers).
+
