@@ -1,3 +1,19 @@
 --Get corr() between avg. completion time and monthly requests. EXTRACT(epoch FROM interval) returns seconds in interval.
 
 
+-- Compute correlation (corr) between 
+-- avg_completion time and count from the subquery
+SELECT CORR(avg_completion, count)
+  -- Convert date_created to its month with date_trunc
+  FROM (SELECT DATE_TRUNC('month', date_created) AS month, 
+               -- Compute average completion time in number of seconds           
+               AVG(EXTRACT(epoch FROM date_completed - date_created)) AS avg_completion, 
+               -- Count requests per month
+               count(*) AS count
+          FROM evanston311
+         -- Limit to rodents
+         WHERE category='Rodents- Rats' 
+         -- Group by month, created above
+         GROUP BY month) 
+         -- Required alias for subquery 
+         AS monthly_avgs;
