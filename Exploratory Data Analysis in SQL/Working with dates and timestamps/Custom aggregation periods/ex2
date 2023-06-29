@@ -1,0 +1,5 @@
+--Count the number of requests created per day. Remember to not count *, or you will risk counting NULL values.
+--Include days with no requests by joining evanston311 to a daily series from 2016-01-01 to 2018-06-30.
+-- Note that because we are not generating bins, you can use June 30th as your series end date.
+
+
