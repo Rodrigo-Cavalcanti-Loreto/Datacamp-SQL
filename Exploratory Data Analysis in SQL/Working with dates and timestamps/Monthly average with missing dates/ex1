@@ -1,0 +1,5 @@
+--Generate a series of dates from 2016-01-01 to 2018-06-30.
+--Join the series to a subquery to count the number of requests created per day.
+--Use date_trunc() to get months from date, which has all dates, NOT day.
+--Use coalesce() to replace NULL count values with 0. Compute the average of this value.
+
