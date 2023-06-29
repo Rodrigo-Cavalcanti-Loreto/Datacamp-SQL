@@ -1,0 +1,4 @@
+--Assign each daily count to a single 6 month bin by joining bins to daily_counts.
+--Compute the median value per bin using percentile_disc().
+
+
