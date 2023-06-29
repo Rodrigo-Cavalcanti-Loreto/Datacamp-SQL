@@ -1,3 +1,25 @@
 --Select the number of requests created and number of requests completed per month.
 
 
+-- Compute monthly counts of requests created
+WITH created AS (
+       SELECT DATE_TRUNC('month', date_created) AS month,
+              COUNT(*) AS created_count
+         FROM evanston311
+        WHERE category='Rodents- Rats'
+        GROUP BY month),
+-- Compute monthly counts of requests completed
+      completed AS (
+       SELECT DATE_TRUNC('month', date_completed) AS month,
+              COUNT(*) AS completed_count
+         FROM evanston311
+        WHERE category='Rodents- Rats'
+        GROUP BY month)
+-- Join monthly created and completed counts
+SELECT created.month, 
+       created_count,
+       completed_count
+  FROM created
+       INNER JOIN completed
+       ON created.month=completed.month
+ ORDER BY created.month;
