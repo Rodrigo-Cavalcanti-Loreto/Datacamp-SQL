@@ -4,7 +4,7 @@
 
 
 -- Count number of requests made per day
-SELECT day, COUNT(*) AS count
+SELECT day, COUNT(date_created) AS count
 -- Use a daily series from 2016-01-01 to 2018-06-30 
 -- to include days with no requests
   FROM (SELECT generate_series('2016-01-01',  -- series start date
