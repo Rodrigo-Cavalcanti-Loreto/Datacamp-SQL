@@ -1,0 +1,2 @@
+--Use date_trunc() to examine the distribution of rat request completion times by number of days.
+
