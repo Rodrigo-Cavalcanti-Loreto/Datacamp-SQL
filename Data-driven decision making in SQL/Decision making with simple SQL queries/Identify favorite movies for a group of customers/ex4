@@ -1,0 +1,4 @@
+--Remove those movies from the table with only one rental.
+--Order the result table such that movies with highest rating come first.
+
+
