@@ -1,0 +1,4 @@
+--Order the rows of the table by the average rating such that it is in decreasing order.
+--Observe what happens to NULL values.
+
+
