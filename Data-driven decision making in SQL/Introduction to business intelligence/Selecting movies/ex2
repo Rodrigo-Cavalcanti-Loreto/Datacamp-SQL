@@ -1,2 +1,5 @@
 --Select the movies 'Showtime', 'Love Actually' and 'The Fighter'.
 
+SELECT *
+FROM movies
+WHERE title IN ('Showtime', 'Love Actually', 'The Fighter'); -- Select all movies with the given titles
