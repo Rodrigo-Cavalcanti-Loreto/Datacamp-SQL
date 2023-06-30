@@ -1,3 +1,5 @@
 --Calculate the average over all ratings.
 
 
+SELECT AVG(rating) -- Calculate the total average rating
+FROM renting;
