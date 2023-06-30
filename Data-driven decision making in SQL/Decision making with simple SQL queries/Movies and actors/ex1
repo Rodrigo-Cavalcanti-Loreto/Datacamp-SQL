@@ -2,3 +2,10 @@
 --Use as an alias for the table actsin the two letters ai.
 
 
+SELECT m.title, -- Create a list of movie titles and actor names
+       a.name
+FROM actsin AS ai
+LEFT JOIN movies AS m
+ON m.movie_id = ai.movie_id
+LEFT JOIN actors AS a
+ON a.actor_id = ai.actor_id;
