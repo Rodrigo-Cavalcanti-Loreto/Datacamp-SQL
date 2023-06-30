@@ -2,3 +2,9 @@
 --For each join use the first letter of the table name as alias.
 
 
+SELECT *
+FROM renting AS r
+LEFT JOIN customers AS c  -- Add customer information
+ON r.customer_id = c.customer_id
+LEFT JOIN movies AS m  -- Add movie information
+ON r.movie_id = m.movie_id;
