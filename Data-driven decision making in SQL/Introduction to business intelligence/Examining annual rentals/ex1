@@ -1,2 +1,6 @@
 --First, select all records of movie rentals since January 1st 2019.
 
+
+SELECT * -- Select all records of movie rentals since January 1st 2019
+FROM renting
+WHERE date_renting >= '2019-01-01';
