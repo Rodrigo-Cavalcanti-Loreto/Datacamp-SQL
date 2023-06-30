@@ -1,2 +1,5 @@
 --Now select only those columns from renting which are needed to calculate the average rating per movie.
 
+SELECT movie_id,  -- Select all columns needed to compute the average rating per movie
+       rating
+FROM renting;
