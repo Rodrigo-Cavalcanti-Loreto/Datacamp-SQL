@@ -1,2 +1,5 @@
 --Select all movies rented on October 9th, 2018.
 
+SELECT *
+FROM renting
+WHERE date_renting = '2018-10-09'; -- Movies rented on October 9th, 2018
