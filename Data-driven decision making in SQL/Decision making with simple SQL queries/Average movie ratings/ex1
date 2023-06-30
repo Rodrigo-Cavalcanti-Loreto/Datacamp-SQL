@@ -1,3 +1,7 @@
 --Group the data in the table renting by movie_id and report the ID and the average rating.
 
 
+SELECT movie_id, 
+       AVG(rating)    -- Calculate average rating per movie
+FROM renting
+GROUP BY movie_id;
