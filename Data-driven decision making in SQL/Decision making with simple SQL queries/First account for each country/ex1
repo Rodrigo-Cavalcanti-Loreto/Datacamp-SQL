@@ -1,0 +1,5 @@
+--Create a table with a row for each country and columns for the country name and the date when the first customer account was created.
+--Use the alias first_account for the column with the dates.
+--Order by date in ascending order.
+
+
