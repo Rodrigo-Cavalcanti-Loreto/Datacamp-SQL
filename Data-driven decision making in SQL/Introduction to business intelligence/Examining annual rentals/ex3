@@ -1,0 +1,8 @@
+--Use as alias column names number_renting and average_rating respectively.
+
+
+SELECT 
+	COUNT(*) AS number_renting, -- Give it the column name number_renting
+	AVG(rating) AS average_rating  -- Give it the column name average_rating
+FROM renting
+WHERE date_renting >= '2019-01-01';
