@@ -2,3 +2,10 @@
 --Observe what happens to NULL values.
 
 
+SELECT movie_id, 
+       AVG(rating) AS avg_rating,
+       COUNT(rating) AS number_ratings,
+       COUNT(*) AS number_renting
+FROM renting
+GROUP BY movie_id
+ORDER BY avg_rating DESC; -- Order by average rating in decreasing order
