@@ -1,0 +1,4 @@
+--Select all movie rentals of the movie with movie_id 25 from the table renting.
+--For those records, calculate the minimum, maximum and average rating and count the number of ratings for this movie.
+
+
