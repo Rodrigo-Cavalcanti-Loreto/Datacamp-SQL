@@ -2,3 +2,7 @@
 --Use as alias' for the tables m and r respectively.
 
 
+SELECT *
+FROM renting AS r
+LEFT JOIN movies AS m -- Choose the correct join statment
+ON r.movie_id = m.movie_id;
