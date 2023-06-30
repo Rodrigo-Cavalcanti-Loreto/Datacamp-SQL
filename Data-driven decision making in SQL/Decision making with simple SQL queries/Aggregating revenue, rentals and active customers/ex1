@@ -1,0 +1,4 @@
+--First, you need to join movies on renting to include the renting_price from the movies table for each renting record.
+--Use as alias' for the tables m and r respectively.
+
+
