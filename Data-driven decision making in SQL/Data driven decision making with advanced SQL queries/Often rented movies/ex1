@@ -1,3 +1,7 @@
 --Select all movie IDs which have more than 5 views.
 
 
+SELECT movie_id -- Select movie IDs with more than 5 views
+FROM renting
+GROUP BY movie_id
+HAVING COUNT(date_renting) > 5;
