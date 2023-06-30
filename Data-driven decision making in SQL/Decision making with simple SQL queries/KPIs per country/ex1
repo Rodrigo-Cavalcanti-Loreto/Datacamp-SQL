@@ -1,0 +1,4 @@
+--Augment the table renting with information about customers and movies.
+--Use as alias the first latter of the table name.
+--Select only records about rentals since beginning of 2019.
+
