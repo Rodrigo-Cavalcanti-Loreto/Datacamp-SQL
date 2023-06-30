@@ -1,0 +1,4 @@
+--Select from table renting all movie rentals from 2018.
+--Filter only those records which have a movie rating.
+
+
