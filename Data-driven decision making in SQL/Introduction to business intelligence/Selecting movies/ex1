@@ -1,3 +1,6 @@
 --Select all movies which are not dramas.
 
 
+SELECT *
+FROM movies
+WHERE genre != 'Drama'; -- All genres except drama  
