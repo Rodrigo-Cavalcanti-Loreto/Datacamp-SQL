@@ -1,2 +1,4 @@
---Group the data in the table renting by movie_id and report the ID and the average rating.
+--Add two columns for the number of ratings and the number of movie rentals to the results table.
+--Use alias names avg_rating, number_rating and number_renting for the corresponding columns.
+
 
