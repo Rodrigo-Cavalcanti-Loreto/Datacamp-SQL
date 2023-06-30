@@ -1,0 +1,4 @@
+--Augment the table renting with customer information and information about the movies.
+--For each join use the first letter of the table name as alias.
+
+
