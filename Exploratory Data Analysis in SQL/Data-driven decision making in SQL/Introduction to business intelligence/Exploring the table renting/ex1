@@ -1,2 +1,4 @@
 --Select all columns from renting.
 
+SELECT *  -- Select all
+FROM renting;        -- From table renting
