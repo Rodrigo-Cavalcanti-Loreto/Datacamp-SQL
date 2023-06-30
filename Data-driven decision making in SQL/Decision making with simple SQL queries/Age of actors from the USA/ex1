@@ -1,0 +1,5 @@
+--Create a subsequent SELECT statements in the FROM clause to get all information about actors from the USA.
+--Give the subsequent SELECT statement the alias a.
+--Report for actors from the USA the year of birth of the oldest and the year of birth of the youngest actor and actress.
+
+
