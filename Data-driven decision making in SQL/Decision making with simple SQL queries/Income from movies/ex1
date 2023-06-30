@@ -1,3 +1,8 @@
 --Use a join to get the movie title and price for each movie rental.
 
 
+SELECT title, -- Use a join to get the movie title and price for each movie rental
+       renting_price
+FROM renting AS r
+LEFT JOIN movies AS m
+ON r.movie_id = m.movie_id;
