@@ -1,0 +1,2 @@
+--Now select all columns from the customer table where the number of movie rentals is smaller than 5.
+
