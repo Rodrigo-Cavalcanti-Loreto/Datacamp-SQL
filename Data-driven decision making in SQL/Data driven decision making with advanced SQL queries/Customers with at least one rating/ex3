@@ -1,0 +1,3 @@
+--Select all records of movie rentals from the customer with ID 1, excluding null ratings.
+
+
