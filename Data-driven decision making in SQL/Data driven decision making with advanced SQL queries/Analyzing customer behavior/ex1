@@ -1,3 +1,7 @@
 --First, count number of movie rentals for customer with customer_id=45. Give the table renting the alias r.
 
 
+-- Count movie rentals of customer 45
+SELECT COUNT(*)
+FROM renting AS r
+WHERE customer_id = 45;
