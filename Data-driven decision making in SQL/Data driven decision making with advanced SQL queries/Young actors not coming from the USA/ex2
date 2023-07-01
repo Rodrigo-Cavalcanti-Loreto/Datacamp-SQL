@@ -1,3 +1,8 @@
 --Report the name, nationality and the year of birth of all actors who were born after 1990.
 
 
+SELECT name, 
+       nationality, 
+       year_of_birth
+FROM actors
+WHERE year_of_birth > 1990; -- Born after 1990
