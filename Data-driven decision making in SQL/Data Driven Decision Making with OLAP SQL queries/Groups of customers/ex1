@@ -1,3 +1,9 @@
 --Create a table with the total number of customers, of all female and male customers, of the number of customers for each country and the number of men and women from each country.
 
 
+SELECT country, -- Extract information of a pivot table of gender and country for the number of customers
+	   gender,
+	   COUNT(*)
+FROM customers
+GROUP BY CUBE (country, gender)
+ORDER BY country;
