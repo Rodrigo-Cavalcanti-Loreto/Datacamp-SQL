@@ -1,3 +1,7 @@
 --Select all records of movie rentals from the customer with ID 1, excluding null ratings.
 
 
+SELECT *
+FROM renting
+WHERE rating IS NOT NULL -- Exclude null ratings
+AND customer_id = '1'; -- Select all ratings from customer with ID 1
