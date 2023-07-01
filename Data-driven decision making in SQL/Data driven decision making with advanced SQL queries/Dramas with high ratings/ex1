@@ -1,3 +1,6 @@
 --Select the IDs of all dramas.
 
 
+SELECT movie_id -- Select the IDs of all dramas
+FROM movies
+WHERE genre = 'Drama';
