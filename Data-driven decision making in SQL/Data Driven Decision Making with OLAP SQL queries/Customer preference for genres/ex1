@@ -1,3 +1,7 @@
 --Augment the records of movie rentals with information about movies. Use the first letter of the table as alias.
 
 
+SELECT *
+FROM renting AS r
+LEFT JOIN movies AS m -- Augment the table with information about movies
+ON r.movie_id = m.movie_id;
