@@ -1,3 +1,10 @@
 --Select the columns country, gender, and rating and use the correct join to combine the table renting with customer.
 
 
+SELECT 
+	country, -- Select country, gender and rating
+    gender,
+    rating
+FROM renting AS r
+LEFT JOIN customers AS c -- Use the correct join
+ON r.customer_id = c.customer_id;
