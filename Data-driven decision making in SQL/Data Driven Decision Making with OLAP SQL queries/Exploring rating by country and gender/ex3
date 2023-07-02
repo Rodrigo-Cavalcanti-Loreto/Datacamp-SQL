@@ -1,0 +1,12 @@
+--Now, use GROUPING SETS to get the same result, i.e. the average rating over country and gender.
+
+
+
+SELECT 
+	c.country, 
+    c.gender,
+	AVG(r.rating)
+FROM renting AS r
+LEFT JOIN customers AS c
+ON r.customer_id = c.customer_id
+GROUP BY GROUPING SETS ((country, gender)); -- Group by country and gender with GROUPING SETS
